@@ -12,6 +12,7 @@ const Item = {
   properties: {
     id: { type: 'string' },
     name: { type: 'string' },
+    email: { type: 'string' },
   },
 }
 
@@ -41,9 +42,10 @@ const postItemOpts = {
   schema: {
     body: {
       type: 'object',
-      required: ['name'],
+      required: ['name' , 'email'],
       properties: {
         name: { type: 'string' },
+        email: { type: 'string' },
       },
     },
     response: {
